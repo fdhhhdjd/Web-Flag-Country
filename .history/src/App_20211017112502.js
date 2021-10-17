@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import { Header, HomePage, NotFound } from "./import/Index";
+import { Header, HomePage } from "./import/Index";
 import { Main } from "./Components/Main";
 function App() {
   return (
@@ -10,9 +10,7 @@ function App() {
           <Route exact path="/">
             <HomePage />
           </Route>
-          <Route path="*">
-            <NotFound />
-          </Route>
+          <Route path="*"></Route>
         </Switch>
       </Main>
     </>

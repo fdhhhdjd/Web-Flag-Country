@@ -1,5 +1,6 @@
+import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import { Header, HomePage, NotFound } from "./import/Index";
+import { Header } from "./import/Index";
 import { Main } from "./Components/Main";
 function App() {
   return (
@@ -9,9 +10,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomePage />
-          </Route>
-          <Route path="*">
-            <NotFound />
           </Route>
         </Switch>
       </Main>

@@ -29,7 +29,7 @@ const ModeSwitcher = styled.div`
   cursor: pointer;
   // font-weight: var(--fw-bold);
   text-transform: capitalize;
-  transition: all 0.5s linear;
+  transition: all 5s linear;
 `;
 
 const Container = styled.div`
