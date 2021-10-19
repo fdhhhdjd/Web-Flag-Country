@@ -10,7 +10,9 @@ function App() {
           <Route exact path="/">
             <HomePage />
           </Route>
-          <Route path="/country/:name" component={Detail} />
+          <Route path="/country/:name">
+            <Detail />
+          </Route>
           <Route path="*">
             <NotFound />
           </Route>

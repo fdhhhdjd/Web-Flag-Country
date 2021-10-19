@@ -43,10 +43,10 @@ const CardListItem = styled.li`
     font-weight: var(--fw-bold);
   }
 `;
-const Card = ({ img, name, info = [], onClick }) => {
+const Card = ({ img, name, info = [] }) => {
   return (
     <>
-      <Wrapper onClick={onClick}>
+      <Wrapper>
         <CardImage src={img} alt={name} />
         <CardBody>
           <CardTitle>{name}</CardTitle>

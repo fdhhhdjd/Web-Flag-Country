@@ -65,8 +65,8 @@ const HomePage = () => {
           return (
             <Card
               key={c.name}
-              {...countryInfo}
               onClick={() => push(`/country/${c.name}`)}
+              {...countryInfo}
             />
           );
         })}

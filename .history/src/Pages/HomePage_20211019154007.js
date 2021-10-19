@@ -4,11 +4,9 @@ import { ALL_COUNTRIES } from "../utils/Data";
 import { List } from "../Components/List";
 import Card from "../Components/Card";
 import Search from "../Components/Search";
-import { useHistory } from "react-router";
 const HomePage = () => {
   const [countries, setCountries] = useState([]);
   const [filtredCountries, setFilteredCountries] = useState(countries);
-  const { push } = useHistory();
   const handleSearch = (search, region) => {
     let data = [...countries];
 
@@ -65,8 +63,8 @@ const HomePage = () => {
           return (
             <Card
               key={c.name}
-              {...countryInfo}
               onClick={() => push(`/country/${c.name}`)}
+              {...countryInfo}
             />
           );
         })}

@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import { Header, HomePage, NotFound, Detail } from "./import/Index";
+import { Header, HomePage, NotFound } from "./import/Index";
 import { Main } from "./Components/Main";
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
           <Route exact path="/">
             <HomePage />
           </Route>
-          <Route path="/country/:name" component={Detail} />
+          <Route path="/country/:name"></Route>
           <Route path="*">
             <NotFound />
           </Route>

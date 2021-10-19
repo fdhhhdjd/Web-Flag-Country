@@ -8,10 +8,9 @@ import { useHistory } from "react-router";
 const HomePage = () => {
   const [countries, setCountries] = useState([]);
   const [filtredCountries, setFilteredCountries] = useState(countries);
-  const { push } = useHistory();
   const handleSearch = (search, region) => {
     let data = [...countries];
-
+    const { push } = useHistory();
     if (region) {
       data = data.filter((c) => c.region.includes(region));
     }
@@ -62,13 +61,7 @@ const HomePage = () => {
             ],
           };
 
-          return (
-            <Card
-              key={c.name}
-              {...countryInfo}
-              onClick={() => push(`/country/${c.name}`)}
-            />
-          );
+          return <Card key={c.name} {...countryInfo} />;
         })}
       </List>
     </>
